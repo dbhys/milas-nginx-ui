@@ -10,4 +10,4 @@ RUN apk update upgrade \
 RUN mkdir -p /deployments
 
 COPY ./nginx.conf /etc/nginx
-COPY ./conf.d/default.conf /etc/nginx/conf.d
+COPY ./default.conf /etc/nginx/conf.d
