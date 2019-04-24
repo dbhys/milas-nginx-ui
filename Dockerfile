@@ -11,3 +11,4 @@ RUN mkdir -p /deployments
 
 COPY ./nginx.conf /etc/nginx
 COPY ./default.conf /etc/nginx/conf.d
+COPY ./index.html /deployments
