@@ -6,8 +6,11 @@ MAINTAINER Milas
 ENV TZ="Asia/Shanghai"
 
 RUN apk update upgrade \
-&& apk add --no-cache bash vim procps unzip curl
-RUN mkdir -p /deployments
+&& apk add --no-cache bash vim procps unzip curl \
+&& mkdir -p /deployments \
+&& chmod -R a+rw /var/cache \
+&& chmod -R a+rw /var/run
+
 
 COPY ./nginx.conf /etc/nginx
 COPY ./default.conf /etc/nginx/conf.d
