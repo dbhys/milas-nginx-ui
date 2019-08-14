@@ -11,7 +11,7 @@ And default Timezone is "Asia/Shanghai"
 ##### 1. Write your Dockerfile like this:
 
 ```
-FROM nginx:dbhys/milas-nginx-ui
+FROM dbhys/milas-nginx-ui
 COPY ${your_dist_files} /deployments
 CMD nginx
 ```
@@ -19,3 +19,5 @@ CMD nginx
 ```
 build -t my-ui:1.0.0 .
 ```
+
+1.0.x-noroot tags for the scene of docker user is not root

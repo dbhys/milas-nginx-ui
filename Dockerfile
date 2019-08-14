@@ -8,6 +8,7 @@ ENV TZ="Asia/Shanghai"
 RUN apk update upgrade \
 && apk add --no-cache bash vim procps unzip curl \
 && mkdir -p /deployments
+WORKDIR /deployments
 
 COPY ./nginx.conf /etc/nginx
 COPY ./default.conf /etc/nginx/conf.d
