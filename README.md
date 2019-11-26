@@ -1,8 +1,6 @@
-# milas-nginx-ui
+# base-alpine
 
-To build a frontend-web-server docker image with nginx.
-
-Nginx version: 1.15.2, base image is alpine. added "bash, vim, unzip, curl", 
+To build a base alpine version, contains  "bash, vim, unzip, curl",
 in order to do some operations in container.
 
 And default Timezone is "Asia/Shanghai"
@@ -13,6 +11,7 @@ And default Timezone is "Asia/Shanghai"
 ```
 FROM dbhys/milas-nginx-ui
 COPY ${your_dist_files} /deployments
+EXPOSE 80
 CMD nginx
 ```
 ##### 2. Build your image
