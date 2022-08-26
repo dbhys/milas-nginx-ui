@@ -1,4 +1,4 @@
-FROM nginx:1.15.12-alpine
+FROM nginx:1.23-alpine
 
 LABEL nginx-version="1.15.2" contains="bash, vim, unzip, curl" deploy-dir="/deployments"
 MAINTAINER Milas
@@ -13,5 +13,9 @@ RUN apk update upgrade \
 
 
 COPY ./nginx.conf /etc/nginx
-COPY ./default.conf /etc/nginx/conf.d
+COPY ./conf.d /etc/nginx/conf.d
+COPY ./templates /etc/nginx/templates
+
 COPY ./index.html /deployments
+
+CMD nginx
