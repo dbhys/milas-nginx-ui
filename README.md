@@ -2,8 +2,8 @@
 
 To build a frontend-web-server docker image with nginx.
 
-Nginx version: 1.15.2, base image is alpine. added "bash, vim, unzip, curl",
-in order to do some operations in container.
+
+Nginx version: 1.23.1, base image is alpine. added "bash, vim, unzip, curl", in order to do some operations in container. This version use template to support environment variables inside configuration.
 
 And default Timezone is "Asia/Shanghai"
 
@@ -22,4 +22,4 @@ CMD nginx
 build -t my-ui:1.0.0 .
 ```
 
-1.0.x-noroot tags for the scene of docker user is not root
+x.x.x-noroot tags for the scene of docker user is not root
