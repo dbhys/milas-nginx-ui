@@ -1,6 +1,6 @@
 FROM nginx:1.23-alpine
 
-LABEL nginx-version="1.15.2" contains="bash, vim, unzip, curl" deploy-dir="/deployments"
+LABEL nginx-version="1.23.1" contains="bash, vim, unzip, curl" deploy-dir="/deployments"
 MAINTAINER Milas
 
 ENV TZ="Asia/Shanghai"
@@ -11,6 +11,7 @@ RUN apk update upgrade \
 && chmod -R a+rw /var/cache \
 && chmod -R a+rw /var/run
 
+WORKDIR /deployments
 
 COPY ./nginx.conf /etc/nginx
 COPY ./conf.d /etc/nginx/conf.d

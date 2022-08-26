@@ -2,7 +2,7 @@
 
 To build a frontend-web-server docker image with nginx.
 
-Nginx version: 1.23, base image is alpine. added "bash, vim, unzip, curl", in order to do some operations in container. This version use template to support environment variables inside configuration.
+Nginx version: 1.23.1, base image is alpine. added "bash, vim, unzip, curl", in order to do some operations in container. This version use template to support environment variables inside configuration.
 
 And default Timezone is "Asia/Shanghai"
 
